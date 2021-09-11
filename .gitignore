@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Serverless
+/node_modules
+/.serverless
+package*.json
+
+# Custom
+.DS_Store
+/.vscode
+/credentials
