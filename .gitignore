@@ -129,9 +129,11 @@ dmypy.json
 .pyre/
 
 # Serverless
+.serverless*
 /node_modules
-/.serverless
 package*.json
+serverless_wsgi.py
+wsgi_handler.py
 
 # Custom
 .DS_Store

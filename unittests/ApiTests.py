@@ -5,10 +5,7 @@ THIS_DIR = os.path.dirname(os.path.realpath(__file__))
 PARENT_DIR = os.path.dirname(THIS_DIR)
 sys.path.append(PARENT_DIR)
 
-TEST_HOST = os.environ.get("TEST_HOST", "http://localhost")
-TEST_PORT = os.environ.get("TEST_PORT", 5000)
-
-TEST_URL = f"{TEST_HOST}:{TEST_PORT}"
+TEST_URL = os.environ.get("TEST_URL", "http://localhost:5000")
 
 testcases = [
     {
@@ -63,7 +60,7 @@ def get_labels_confidence(filename, unique=False):
         files = {'file': (filepath, f)}
         r = requests.post(res['url'], data=res['fields'], files=files)
         if not str(r.status_code).startswith("2"):
-            raise Exception(f"Error {res.status_code} ({res.content})")
+            raise Exception(f"Error {r.status_code} ({r.content})")
 
     # 3. reading labels
     r = requests.get(f"{TEST_URL}/labels?filename={res['fields']['key']}")
@@ -75,6 +72,7 @@ def get_labels_confidence(filename, unique=False):
 ## testing if server is up
 server_available = True
 try:
+    print(f"Testing url: {TEST_URL}")
     requests.get(f"{TEST_URL}/")
 except: server_available = False
 
@@ -84,7 +82,7 @@ class ApiTest(unittest.TestCase):
     @unittest.skipUnless(server_available, "server is not running")
     def test1_url(self):
         r = requests.get(f"{TEST_URL}/url")
-        self.assertTrue(int(r.status_code) == 200)
+        self.assertEqual(int(r.status_code), 200)
         res = json.loads(r.text)
         self.assertTrue(re.match(r"https://.*\.s3.amazonaws.com", res["url"]))
         self.assertTrue(re.match(r"^[-\w]{36}$", res["fields"]["key"]))
@@ -92,7 +90,7 @@ class ApiTest(unittest.TestCase):
     @unittest.skipUnless(server_available, "server is not running")
     def test1_url_filename(self):
         r = requests.get(f"{TEST_URL}/url?filename=example")
-        self.assertTrue(int(r.status_code) == 200)
+        self.assertEqual(int(r.status_code), 200)
         res = json.loads(r.text)
         self.assertTrue(re.match(r"https://.*\.s3.amazonaws.com", res["url"]))
         self.assertEqual("example", res["fields"]["key"])
