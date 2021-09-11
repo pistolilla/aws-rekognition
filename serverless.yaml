@@ -8,8 +8,8 @@ provider:
   memorySize: 128
   lambdaHashingVersion: 20201221
   environment:
-    S3_ACCESS_KEY_ID: ${env:S3_ACCESS_KEY_ID}
-    S3_SECRET_ACCESS_KEY: ${env:S3_SECRET_ACCESS_KEY}
+    BOTO_ACCESS_KEY_ID: ${env:BOTO_ACCESS_KEY_ID}
+    BOTO_SECRET_ACCESS_KEY: ${env:BOTO_SECRET_ACCESS_KEY}
     S3_BUCKET_NAME: ${env:S3_BUCKET_NAME}
     S3_BUCKET_REGION: ${env:S3_BUCKET_REGION}
 
@@ -18,15 +18,33 @@ plugins:
 - serverless-python-requirements
 
 custom:
+  pythonRequirements:
+    pythonBin: python3
   wsgi:
     app: app.app
     packRequirements: false
 
 functions:
-  app:
+  index:
     handler: wsgi.handler
     events:
-      - http: ANY /
-      - http: 'ANY /{proxy+}'
+      - http:
+          path: ""
+          method: get
+          cors: true
+  url:
+    handler: wsgi.handler
+    events:
+      - http:
+          path: url
+          method: get
+          cors: true
+  labels:
+    handler: wsgi.handler
+    events:
+      - http:
+          path: labels
+          method: get
+          cors: true
 
 configValidationMode: error
