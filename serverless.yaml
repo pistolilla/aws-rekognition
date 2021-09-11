@@ -2,6 +2,12 @@ service: awsreko
 
 provider:
   name: aws
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - 's3:*'
+      Resource:
+        - 'arn:aws:s3:::${env:S3_BUCKET_NAME}/*'
   runtime: python3.7
   stage: dev
   region: us-east-1
@@ -48,3 +54,4 @@ functions:
           cors: true
 
 configValidationMode: error
+
