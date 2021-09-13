@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    response = make_response({"Message": "Hello!"})
+    response = make_response({"Message": f"Hello! Documentation for this API is available here: https://documenter.getpostman.com/view/12164167/U16ks5sm"})
     return response
 
 @app.route("/url")

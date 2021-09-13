@@ -1,0 +1,83 @@
+openapi: 3.0.0
+servers:
+  - url: http://example.com
+    description: ""
+    variables: {}
+info:
+  version: d3d46c9c-a690-41f2-b04f-44b71a9a0668
+  title: aws-rekognition
+  description: ""
+  termsOfService: ""
+  contact: {}
+  license:
+    name: ""
+paths:
+  /url:
+    get:
+      summary: url
+      operationId: url
+      parameters: []
+      responses:
+        "200":
+          description: url
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/200"
+              example:
+                fields:
+                  key: e1fb0dcb-9870-4896-9b4a-158d42fb3bf9
+                  policy: eyJleHBpcmF0aW9uIjogIjIwMjEtMDktMTNUMDQ6MTY6NDFaIiwgImNvbmRpdGlvbnMiOiBbeyJidWNrZXQiOiAic29maWEtdGVzdCJ9LCB7ImtleSI6ICJlMWZiMGRjYi05ODcwLTQ4OTYtOWI0YS0xNThkNDJmYjNiZjkifSwgeyJ4LWFtei1hbGdvcml0aG0iOiAiQVdTNC1ITUFDLVNIQTI1NiJ9LCB7IngtYW16LWNyZWRlbnRpYWwiOiAiQVNJQVEzSjJTRVVIUUZGREJKRFovMjAyMTA5MTMvdXMtZWFzdC0yL3MzL2F3czRfcmVxdWVzdCJ9LCB7IngtYW16LWRhdGUiOiAiMjAyMTA5MTNUMDMxNjQxWiJ9LCB7IngtYW16LXNlY3VyaXR5LXRva2VuIjogIklRb0piM0pwWjJsdVgyVmpFTXovLy8vLy8vLy8vd0VhQ1hWekxXVmhjM1F0TVNKSE1FVUNJUUMzZm5vYzBpUWIwemVBKzRsVEdURVd4cTU1b0g0SnBjaWJ6clJCZ3g3c1VBSWdZVjEvREFQRTMxUEMyMkpOMW5BcUZ6eWE0ZThGc3lTYlhjc282ZVZPcTg4cWxBSUlKQkFCR2d3d05UZzJOREUzTlRNek5Ua2lESDJMYVUwVmljV2UwNG1pNXlyeEFjZVN0MUlUdzJNNUkvRzJmYVpjNTlkZTdPeENxdWFvTllBNXBGV1NPWktKcmxsWnBFV01vTHpWSmVNa1hkOGVKMjN4L0g1REJvdkU4aXVmRjBaRklUZFRzbEt5dWJIRHgrMCt3djg5UjhQZitOSWZOemtvWCtacEJVMDQ2N2hlMC9Pamx3dzU3UlVPM3dLbEJuTTYzdmFrZ1ZYRVNMeHVKc2FmQmlkTU4vU2hiZnBaTlJpZ0lNMUVKR0Jvc2hwb3hOMFl6NlpTNVpFWDNKV01MYmZEdWQrK3VBK25nU2FodU53TzJxTXM4Yk9keCsxSUtJSVdLWDl2d3VlSnl4MlhmRk8vakRCVmpDaDFWcExHbE9iVWhRdTlOaXF1a2FHZGxIUjQyWGpZelFXYThmL3UxNFNXOFJ1eUhidXZQOVVXNkk4d2xZWDdpUVk2bWdHK1hHMUFtN3lCZVJXK0kxcUN2Z01RcnBKalByYWRmVVhVVkJ3aTMzVHlDRFpIK1pMR2xMUzJWTXYrcmNTek1TTXVmNkxPTXhMME1Zd1p0dFRFeUdqQkx2TFRrVWxhdnErQm1NNnJvTENZRVNjbk5valRNMEdJQndTTmp5K3dOL2RBU3h0UDZRVDZLdHFmcDZPWTl0TGRXOUxudE5TcWp5eDVkb2lRRWlvWEIvekc3N2lNVDNoREtQQlBtQzlXZGxSWEEzMmdLM2M3NXl5diJ9XX0=
+                  x-amz-algorithm: AWS4-HMAC-SHA256
+                  x-amz-credential: ASIAQ3J2SEUHQFFDBJDZ/20210913/us-east-2/s3/aws4_request
+                  x-amz-date: 20210913T031641Z
+                  x-amz-security-token: IQoJb3JpZ2luX2VjEMz//////////wEaCXVzLWVhc3QtMSJHMEUCIQC3fnoc0iQb0zeA+4lTGTEWxq55oH4JpcibzrRBgx7sUAIgYV1/DAPE31PC22JN1nAqFzya4e8FsySbXcso6eVOq88qlAIIJBABGgwwNTg2NDE3NTMzNTkiDH2LaU0VicWe04mi5yrxAceSt1ITw2M5I/G2faZc59de7OxCquaoNYA5pFWSOZKJrllZpEWMoLzVJeMkXd8eJ23x/H5DBovE8iufF0ZFITdTslKyubHDx+0+wv89R8Pf+NIfNzkoX+ZpBU0467he0/Ojlww57RUO3wKlBnM63vakgVXESLxuJsafBidMN/ShbfpZNRigIM1EJGBoshpoxN0Yz6ZS5ZEX3JWMLbfDud++uA+ngSahuNwO2qMs8bOdx+1IKIIWKX9vwueJyx2XfFO/jDBVjCh1VpLGlObUhQu9NiqukaGdlHR42XjYzQWa8f/u14SW8RuyHbuvP9UW6I8wlYX7iQY6mgG+XG1Am7yBeRW+I1qCvgMQrpJjPradfUXUVBwi33TyCDZH+ZLGlLS2VMv+rcSzMSMuf6LOMxL0MYwZttTEyGjBLvLTkUlavq+BmM6roLCYEScnNojTM0GIBwSNjy+wN/dASxtP6QT6Ktqfp6OY9tLdW9LntNSqjyx5doiQEioXB/zG77iMT3hDKPBPmC9WdlRXA32gK3c75yyv
+                  x-amz-signature: e20bfae5731a5f20928c03237b807712311686e4322c669a85b956ae20f49945
+                url: https://xxxx-test.s3.amazonaws.com/
+  /labels: {}
+components:
+  schemas:
+    "200":
+      type: object
+      properties:
+        fields:
+          type: object
+          properties:
+            key:
+              type: string
+              description: ""
+              default: e1fb0dcb-9870-4896-9b4a-158d42fb3bf9
+            policy:
+              type: string
+              description: ""
+              default: eyJleHBpcmF0aW9uIjogIjIwMjEtMDktMTNUMDQ6MTY6NDFaIiwgImNvbmRpdGlvbnMiOiBbeyJidWNrZXQiOiAic29maWEtdGVzdCJ9LCB7ImtleSI6ICJlMWZiMGRjYi05ODcwLTQ4OTYtOWI0YS0xNThkNDJmYjNiZjkifSwgeyJ4LWFtei1hbGdvcml0aG0iOiAiQVdTNC1ITUFDLVNIQTI1NiJ9LCB7IngtYW16LWNyZWRlbnRpYWwiOiAiQVNJQVEzSjJTRVVIUUZGREJKRFovMjAyMTA5MTMvdXMtZWFzdC0yL3MzL2F3czRfcmVxdWVzdCJ9LCB7IngtYW16LWRhdGUiOiAiMjAyMTA5MTNUMDMxNjQxWiJ9LCB7IngtYW16LXNlY3VyaXR5LXRva2VuIjogIklRb0piM0pwWjJsdVgyVmpFTXovLy8vLy8vLy8vd0VhQ1hWekxXVmhjM1F0TVNKSE1FVUNJUUMzZm5vYzBpUWIwemVBKzRsVEdURVd4cTU1b0g0SnBjaWJ6clJCZ3g3c1VBSWdZVjEvREFQRTMxUEMyMkpOMW5BcUZ6eWE0ZThGc3lTYlhjc282ZVZPcTg4cWxBSUlKQkFCR2d3d05UZzJOREUzTlRNek5Ua2lESDJMYVUwVmljV2UwNG1pNXlyeEFjZVN0MUlUdzJNNUkvRzJmYVpjNTlkZTdPeENxdWFvTllBNXBGV1NPWktKcmxsWnBFV01vTHpWSmVNa1hkOGVKMjN4L0g1REJvdkU4aXVmRjBaRklUZFRzbEt5dWJIRHgrMCt3djg5UjhQZitOSWZOemtvWCtacEJVMDQ2N2hlMC9Pamx3dzU3UlVPM3dLbEJuTTYzdmFrZ1ZYRVNMeHVKc2FmQmlkTU4vU2hiZnBaTlJpZ0lNMUVKR0Jvc2hwb3hOMFl6NlpTNVpFWDNKV01MYmZEdWQrK3VBK25nU2FodU53TzJxTXM4Yk9keCsxSUtJSVdLWDl2d3VlSnl4MlhmRk8vakRCVmpDaDFWcExHbE9iVWhRdTlOaXF1a2FHZGxIUjQyWGpZelFXYThmL3UxNFNXOFJ1eUhidXZQOVVXNkk4d2xZWDdpUVk2bWdHK1hHMUFtN3lCZVJXK0kxcUN2Z01RcnBKalByYWRmVVhVVkJ3aTMzVHlDRFpIK1pMR2xMUzJWTXYrcmNTek1TTXVmNkxPTXhMME1Zd1p0dFRFeUdqQkx2TFRrVWxhdnErQm1NNnJvTENZRVNjbk5valRNMEdJQndTTmp5K3dOL2RBU3h0UDZRVDZLdHFmcDZPWTl0TGRXOUxudE5TcWp5eDVkb2lRRWlvWEIvekc3N2lNVDNoREtQQlBtQzlXZGxSWEEzMmdLM2M3NXl5diJ9XX0=
+            x-amz-algorithm:
+              type: string
+              description: ""
+              default: AWS4-HMAC-SHA256
+            x-amz-credential:
+              type: string
+              description: ""
+              default: ASIAQ3J2SEUHQFFDBJDZ/20210913/us-east-2/s3/aws4_request
+            x-amz-date:
+              type: string
+              description: ""
+              default: 20210913T031641Z
+            x-amz-security-token:
+              type: string
+              description: ""
+              default: IQoJb3JpZ2luX2VjEMz//////////wEaCXVzLWVhc3QtMSJHMEUCIQC3fnoc0iQb0zeA+4lTGTEWxq55oH4JpcibzrRBgx7sUAIgYV1/DAPE31PC22JN1nAqFzya4e8FsySbXcso6eVOq88qlAIIJBABGgwwNTg2NDE3NTMzNTkiDH2LaU0VicWe04mi5yrxAceSt1ITw2M5I/G2faZc59de7OxCquaoNYA5pFWSOZKJrllZpEWMoLzVJeMkXd8eJ23x/H5DBovE8iufF0ZFITdTslKyubHDx+0+wv89R8Pf+NIfNzkoX+ZpBU0467he0/Ojlww57RUO3wKlBnM63vakgVXESLxuJsafBidMN/ShbfpZNRigIM1EJGBoshpoxN0Yz6ZS5ZEX3JWMLbfDud++uA+ngSahuNwO2qMs8bOdx+1IKIIWKX9vwueJyx2XfFO/jDBVjCh1VpLGlObUhQu9NiqukaGdlHR42XjYzQWa8f/u14SW8RuyHbuvP9UW6I8wlYX7iQY6mgG+XG1Am7yBeRW+I1qCvgMQrpJjPradfUXUVBwi33TyCDZH+ZLGlLS2VMv+rcSzMSMuf6LOMxL0MYwZttTEyGjBLvLTkUlavq+BmM6roLCYEScnNojTM0GIBwSNjy+wN/dASxtP6QT6Ktqfp6OY9tLdW9LntNSqjyx5doiQEioXB/zG77iMT3hDKPBPmC9WdlRXA32gK3c75yyv
+            x-amz-signature:
+              type: string
+              description: ""
+              default: e20bfae5731a5f20928c03237b807712311686e4322c669a85b956ae20f49945
+        url:
+          type: string
+          description: ""
+          default: https://xxxx-test.s3.amazonaws.com/
+security: []
+tags: []
+externalDocs:
+  url: ""
+  description: ""
+warnings: []

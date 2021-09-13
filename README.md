@@ -3,6 +3,11 @@ Sample web service for cloud image recognition using AWS Rekognition
 
 This example is designed for [Serverless Framework](https://www.serverless.com/).
 
+Open API definition is located in these formats:
+* [Postman](https://documenter.getpostman.com/view/12164167/U16ks5sm)
+* [aws-rekognition.json](openapi/aws-rekognition.json)
+* [aws-rekognition.yaml](openapi/aws-rekognition.yaml)
+
 To deploy simply run:
 ```bash
 # Serverless deployment credentials
